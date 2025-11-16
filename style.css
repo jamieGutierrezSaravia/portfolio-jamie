@@ -1,0 +1,62 @@
+/* Estilo general */
+body {
+    font-family: Arial, sans-serif; /* Fuente estándar */
+    background-color: #f0f8ff; /* Fondo suave */
+    margin: 20px;
+}
+
+/* Encabezado */
+header {
+    background-color: #4CAF50; /* Verde */
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+/* Imagen */
+#foto {
+    width: 200px; /* Ajustar tamaño */
+    height: auto;
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+th, td {
+    border: 1px solid #333;
+    padding: 10px;
+    text-align: center;
+}
+th {
+    background-color: #ddd;
+}
+
+/* Formulario */
+form {
+    margin-top: 20px;
+    background-color: #fff3cd;
+    padding: 15px;
+    border: 1px solid #ccc;
+}
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #45a049;
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+}
