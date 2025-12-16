@@ -32,12 +32,24 @@ header {
   background: #2c3e50;
   padding: 20px;
   text-align: center;
-  position: relative;
+  display: flex;
 }
 
 header p {
   color: #00aaff;
   font-weight: bold;
+}
+
+.titulo {
+    color: #f1c40f;
+    font-family: "Tiny5", sans-serif;
+    text-align: center;
+    font-size: 32px;
+}
+
+h1 {
+  font-size: 50px !important;
+  margin: 0;
 }
 
 #menu {
@@ -74,6 +86,7 @@ header p {
 
 /* Burger  */
 #boton-menu {
+  display: none;
   position: absolute;
   top: 20px;
   left: 20px;
@@ -118,6 +131,15 @@ th, td {
   border: 2px solid #f1c40f;
 }
 
+.lista-proyectos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 390px;
+  font-size: 20px;
+  list-style: none;
+}
+
 
 /* Carrusel */
 .carrusel {
@@ -142,11 +164,19 @@ footer {
   margin-top: 200px;
 }
 
+.logo {
+  width: 30px;
+}
+
 .contacto-footer {
-  margin-bottom: 16px;
   font-size: 15.2px;
   text-align: center;
   line-height: 1.8;
+  display: flex;
+  justify-content: space-between;
+  width: 34%;
+  margin: 0 auto;
+  
 }
 
 .contacto-footer a {
@@ -174,12 +204,14 @@ footer {
   padding: 10px;
   border-radius: 50%;
   cursor: pointer; /*Cambia el cursor a una mano al pasar por encima, indicando que es interactivo.*/
+  width: 40px;
+  height: 40px;
 }
 
 /* Botón cambiar tema */
 #MODO-CLARO-OSCURO {
   position: absolute;
-  top: 20px;
+  top: 40px;
   right: 20px;
   background: linear-gradient(135deg, #f1c40f, #ffdd55);
   color: #2c3e50;

@@ -3,34 +3,50 @@
 <head>
   <meta charset="UTF-8">
   <title>Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tiny5&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header>
-    <h1>Jamie Alfredo Gutierrez Saravia</h1>
-    <button id="boton-menu">☰</button>
-    <nav id="menu">
-      <ul class="nav-lista">
-         <li><a href="#sobre-mi">Sobre mí</a></li>
-         <li><a href="#tecnologias">Tecnologías</a></li>
-         <li><a href="#perfil">Perfil</a></li>
-         <li><a href="#galeria">Galería</a></li>
-         <li><a href="#contacto">Contacto</a></li>
-      </ul>
-    </nav>
-    <button id="MODO-CLARO-OSCURO">MODO CLARO/OSCURO</button>
+    <div class="header-titulo">
+      <h1 class="titulo">Jamie Alfredo Gutierrez Saravia</h1>
+    </div>
+
+
+    <div id="header-burger">
+      <button id="boton-menu">☰</button>
+  
+      <nav id="menu">
+        <ul class="nav-lista">
+           <li><a href="#sobre-mi">Sobre mí</a></li>
+           <li><a href="#tecnologias">Tecnologías</a></li>
+           <li><a href="#perfil">Perfil</a></li>
+           <li><a href="#galeria">Galería</a></li>
+           <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div id="boton-tema">
+      <button id="MODO-CLARO-OSCURO">MODO CLARO/OSCURO</button>
+    </div>
   </header>
 
   <main>
     <section id="sobre-mi">
-      <h2>Sobre mí</h2>
-      <p>Soy desarrollador full stack en formación, apasionado por la tecnología desde chico: videojuegos, apps y todo lo que implique crear soluciones digitales. Me motiva mejorar cada día, aprender nuevas herramientas y crecer hasta convertirme en un profesional sólido y versátil. Actualmente participo en proyectos académicos dentro de la facultad, donde aprendí a trabajar en equipo, organizar tareas y cumplir objetivos. Aunque fueron proyectos pequeños, me ayudaron a entender la importancia de la colaboración y la planificación.
-      Lo que me diferencia como persona y profesional es el respeto hacia el cliente. Siempre cumplo en tiempo y forma porque entiendo que detrás de cada sitio web o aplicación hay un sueño: mostrar, vender, comunicar. Mi compromiso es ayudar a que ese sueño se haga realidad.
-      Mi meta más cercana es conseguir mi primer trabajo en el rubro IT. Una vez dentro, quiero seguir creciendo sin pausa, aprendiendo de cada experiencia y aportando valor en cada proyecto que me toque desarrollar.</p>
+      <h2 class="titulo">Sobre mí</h2>
+      <p>Soy desarrollador full stack en formación, apasionado por la tecnología desde chico: videojuegos, apps y todo lo que implique crear soluciones digitales. Me motiva mejorar cada día, aprender nuevas herramientas y crecer hasta convertirme en un profesional sólido y versátil. Actualmente participo en proyectos académicos dentro de la facultad, donde aprendí a trabajar en equipo, organizar tareas y cumplir objetivos. Aunque fueron proyectos pequeños, me ayudaron a entender la importancia de la colaboración y la planificación.Lo que me diferencia como persona y profesional es el respeto hacia el cliente. </p>
+<br>
+      <p>
+        Siempre cumplo en tiempo y forma porque entiendo que detrás de cada sitio web o aplicación hay un sueño: mostrar, vender, comunicar. Mi compromiso es ayudar a que ese sueño se haga realidad.
+      Mi meta más cercana es conseguir mi primer trabajo en el rubro IT. Una vez dentro, quiero seguir creciendo sin pausa, aprendiendo de cada experiencia y aportando valor en cada proyecto que me toque desarrollar.
+      </p>
     </section>
 
     <section id="tecnologias">
-      <h2>Tecnologías</h2>
+      <h2 class="titulo">Tecnologías</h2>
       <table>
         <tr>
           <th>Habilidades Técnicas</th>
@@ -46,12 +62,12 @@
     <section id="perfil">
       <div class="contenedor">
         <div class="foto">
-          <h2>Programador</h2>
+          <h2 class="titulo">Programador</h2>
           <img src="assets/img/foto_jamie_cv.jpeg" alt="Foto personal" id="foto">
         </div>
         <div class="proyectos">
-          <h2>Mis proyectos</h2>
-          <ul>
+          <h2 class="titulo">Mis proyectos</h2>
+          <ul class="lista-proyectos">
             <li>App de accesorios y suplementos deportivos. (JavaScript + React)</li>
             <li>App deportiva para búsqueda de equipos de fútbol (HTML, Js y Css)</li>
             <li>App para ver películas y series (Expo, API, Vite, Backend propio)</li>
@@ -60,25 +76,32 @@
       </div>
     </section>
 
+    <!-- Agregar enlaces correspondientes a las apps-->
     <section id="galeria">
-      <h2>Galería de Proyectos</h2>
+      <h2 class="titulo">Galería de Proyectos</h2>
       <div class="carrusel">
         <button onclick="cambiar(-1)">⟨</button>
-        <img id="carrusel" src="assets/img/foto_app_alfa_gym.jpeg">
+        <a href="https://github.com/jamieGutierrezSaravia/portfolio-jamie" target="_blank">
+          <img id="carrusel" src="assets/img/foto_app_alfa_gym.jpeg">
+        </a>
         <button onclick="cambiar(1)">⟩</button>
       </div>
     </section>
   </main>
 
   <footer id="contacto">
-    <div class="contacto-footer">
-      <p>DNI: 94308941</p>
-      <p>Email: jamie.gutierrez.saravia@gmail.com</p>
-      <p>Teléfono: 1136996122</p>
-      <a href="https://github.com/jamieGutierrezSaravia" target="_blank">Mi perfil en GitHub</a>
-      <a href="https://www.linkedin.com/in/jamie-alfredo-gutierrez-saravia-b778471a1/" target="_blank">Mi perfil en LinkedIn</a>
-    </div>
     <p>© 2025 - Portfolio de Jamie Alfredo Gutierrez Saravia</p>
+    <div class="contacto-footer">
+      <a href="mailto:jamie.gutierrez.saravia@gmail.com">
+        <img class="logo" src="assets/img/email.png" alt="email">
+      </a>
+      <a href="https://github.com/jamieGutierrezSaravia" target="_blank">
+        <img class="logo" src="assets/img/github.png" alt="Github">
+      </a>
+      <a href="https://www.linkedin.com/in/jamie-alfredo-gutierrez-saravia-b778471a1/" target="_blank">
+        <img class="logo" src="assets/img/linkedin.png" alt="linkedin">
+      </a>
+    </div>
   </footer>
 
   <button id="volver-arriba">⬆</button>
