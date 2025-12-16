@@ -1,0 +1,219 @@
+header h1 {
+  color: rgb(171, 3, 17);
+  font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background: #1e1e1e;
+  color: #00aaff; /* celeste en oscuro */
+}
+
+body.claro {
+  background: #fff;
+}
+
+/* En modo claro, forzamos color en los links del menú */
+body.claro .nav-lista li a {
+  color: #00aaff;
+}
+
+
+body.claro .nav-lista li a:hover {
+  background: rgba(0,170,255,0.2);
+}
+
+
+/*Header y nav*/
+header {
+  background: #2c3e50;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+header p {
+  color: #00aaff;
+  font-weight: bold;
+}
+
+#menu {
+  display: none;/*Al inicio, el menu esta oculto */
+}
+
+#menu.visible {
+  display: block; /*lo hace visible*/
+}
+
+
+.nav-lista {
+  list-style-type: none;/* elimina viñetas en <ul> y números en <ol> */
+  display: flex;
+  flex-direction: row; /* fuerza que esten uno al lado del otro */
+  gap: 14px;
+  justify-content: center; /*justify-content:ocupa todo el ancho*/
+  flex-wrap: wrap; /*permite que los elementos salten a otra línea si no hay espacio */
+  padding: 0;
+  margin: 10px 0 0;
+}
+
+.nav-lista li a {
+  padding: 6px 10px; /*espacio 6px arriba y abajo, 10px a izquierda y derecha.*/
+  border-radius: 6px;
+  color: #f1c40f;
+  text-decoration: none;/*sin subrayar*/
+  white-space: nowrap; /* Si el enlace es largo, se mantiene en una sola línea, no se parte en dos */
+}
+
+.nav-lista li a:hover {/*hover: cambia el fondo al pasar el mouse */
+  background: rgba(241,196,15,0.15);
+}
+
+/* Burger  */
+#boton-menu {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+/*Secciones*/
+section {
+  padding: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+section h2 {
+  color: #f1c40f;
+}
+
+/* Tabla  */
+table {
+  width: 100%;
+  border-collapse: collapse;/*Con border-collapse:  le decís al navegador: “Uní los bordes adyacentes en uno solo.”*/
+  margin-top: 10px;
+  background: #2c2c2c;
+}
+th, td {
+  border: 1px solid #444;
+  padding: 8px;
+  text-align: center;
+}
+
+
+/* Perfil */
+#perfil .contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  background: #2c2c2c;
+  padding: 15px;
+  border-radius: 8px;
+}
+#perfil img {
+  width: 220px;
+  border-radius: 10px;
+  border: 2px solid #f1c40f;
+}
+
+
+/* Carrusel */
+.carrusel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.carrusel img {
+  border-radius: 8px;
+  width: 1000px;
+  max-width: 95%;
+  height: auto;
+}
+
+
+footer {
+  background: #2c3e50;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 200px;
+}
+
+.contacto-footer {
+  margin-bottom: 16px;
+  font-size: 15.2px;
+  text-align: center;
+  line-height: 1.8;
+}
+
+.contacto-footer a {
+  color: #66ccff;
+  text-decoration: none;
+  display: block;
+  margin: 12px 0;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s ease;/*Cuando cambia el color del texto,lo hace en 0.3 segundos con una animación suave,tiempo del cambio.*/
+}
+
+.contacto-footer a:hover {
+  color: #f1c40f; /*hover: aplica este estilo al pasar el mouse por encima*/
+}
+
+/* Botón volver arriba */
+#volver-arriba {
+  position: fixed; /*fixed es para que se quede  a la vista  a pesar de hacer scroll*/
+  bottom: 20px;
+  right: 20px;
+  display: none; /*oculto al inicio*/
+  background: #f1c40f;
+  border: none; 
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer; /*Cambia el cursor a una mano al pasar por encima, indicando que es interactivo.*/
+}
+
+/* Botón cambiar tema */
+#MODO-CLARO-OSCURO {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: linear-gradient(135deg, #f1c40f, #ffdd55);
+  color: #2c3e50;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.95rem;
+  cursor: pointer; /*aparece el dedo*/
+  transition: all 0.3s ease;
+}
+
+#MODO-CLARO-OSCURO:hover {
+  background: linear-gradient(135deg, #ffe680, #f1c40f);
+  transform: scale(1.05); /*hace que se agrande  un 5% respecto a su tamaño original.*/
+}
+
+/* Versión en modo claro */
+body.claro #MODO-CLARO-OSCURO { /*cuando esta en modo claro el color cambia a un degradado lineal*/
+  background: linear-gradient(135deg, #9c2e50, #34495e);
+  color: #f1c40f;
+}
+
+
+/*Breakpoints: es una condición de tamaño de pantalla que activa estilos diferentes.*/
+
+@media (max-width: 768px) {/* estilos que se aplican solo si la pantalla mide 768px o menos */
+  #menu { display: block; }
+  #boton-menu { display: block; }
+  #perfil .contenedor { flex-direction: column; }
+}
+@media (max-width: 480px) {
+  .carrusel img { width: 95%; }
+}
+@media (max-width: 375px) {
+  header h1 { font-size: 1.2rem; }
+}

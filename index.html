@@ -1,62 +1,87 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Jamie Alfredo Gutierrez Saravia</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <h1>Jamie Alfredo Gutierrez Saravia</h1>
-        <p>DNI: 94308941</p>
-        <p>Email: jamie.gutierrez.saravia@gmail.com</p>
-        <p>Teléfono: xxxxxxxxxxxxx</p>
-        <a href="https://github.com/jamieGutierrezSaravia" target="_blank">Mi perfil en GitHub</a>
-    </header>
+  <header>
+    <h1>Jamie Alfredo Gutierrez Saravia</h1>
+    <button id="boton-menu">☰</button>
+    <nav id="menu">
+      <ul class="nav-lista">
+         <li><a href="#sobre-mi">Sobre mí</a></li>
+         <li><a href="#tecnologias">Tecnologías</a></li>
+         <li><a href="#perfil">Perfil</a></li>
+         <li><a href="#galeria">Galería</a></li>
+         <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+    <button id="MODO-CLARO-OSCURO">MODO CLARO/OSCURO</button>
+  </header>
 
-    <main>
-        <section>
-            <h2>Sobre mí</h2>
-            <p>Soy desarrollador en formación con interés en tecnologías modernas y soluciones eficientes. Este portfolio es mi carta de presentación para la materia de Frontend.</p>
-        </section>
+  <main>
+    <section id="sobre-mi">
+      <h2>Sobre mí</h2>
+      <p>Soy desarrollador full stack en formación, apasionado por la tecnología desde chico: videojuegos, apps y todo lo que implique crear soluciones digitales. Me motiva mejorar cada día, aprender nuevas herramientas y crecer hasta convertirme en un profesional sólido y versátil. Actualmente participo en proyectos académicos dentro de la facultad, donde aprendí a trabajar en equipo, organizar tareas y cumplir objetivos. Aunque fueron proyectos pequeños, me ayudaron a entender la importancia de la colaboración y la planificación.
+      Lo que me diferencia como persona y profesional es el respeto hacia el cliente. Siempre cumplo en tiempo y forma porque entiendo que detrás de cada sitio web o aplicación hay un sueño: mostrar, vender, comunicar. Mi compromiso es ayudar a que ese sueño se haga realidad.
+      Mi meta más cercana es conseguir mi primer trabajo en el rubro IT. Una vez dentro, quiero seguir creciendo sin pausa, aprendiendo de cada experiencia y aportando valor en cada proyecto que me toque desarrollar.</p>
+    </section>
 
-        <section>
-            <h2>Tecnologías</h2>
-            <table>
-                <tr>
-                    <th>Conozco</th>
-                    <th>Quiero aprender</th>
-                </tr>
-                <tr>
-                    <td>JavaScript, Python, SQL, Node.js</td>
-                    <td>React, Angular, Php</td>
-                </tr>
-            </table>
-        </section>
+    <section id="tecnologias">
+      <h2>Tecnologías</h2>
+      <table>
+        <tr>
+          <th>Habilidades Técnicas</th>
+          <th>Habilidades Blandas</th>
+        </tr>
+        <tr>
+          <td>Html, Css, JavaScript, Python, SQL, Node.js</td>
+          <td>Conocimiento de Depuración, Estructura de datos y algoritmos, Resolución de problemas, Liderazgo, Trabajo en equipo, Inteligencia Emocional</td>
+        </tr>
+      </table>
+    </section>
 
-       
-        <section id="perfil">
-            <div class="contenedor">
-                <div class="foto">
-                    <h2>Programador</h2>
-                    <img src="foto_jamie_cv.jpeg" alt="Foto personal" id="foto">
-                </div>
-                <div class="proyectos">
-                    <h2>Mis proyectos</h2>
-                    <ul>
-                        <li>App de Clima (JavaScript + API)</li>
-                        <li>Gestor de Tareas (Node.js + SQL)</li>
-                        <li>Portfolio Personal (HTML + CSS)</li>
-                        <li>Blog Técnico (Python + Flask)</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-    </main>
+    <section id="perfil">
+      <div class="contenedor">
+        <div class="foto">
+          <h2>Programador</h2>
+          <img src="assets/img/foto_jamie_cv.jpeg" alt="Foto personal" id="foto">
+        </div>
+        <div class="proyectos">
+          <h2>Mis proyectos</h2>
+          <ul>
+            <li>App de accesorios y suplementos deportivos. (JavaScript + React)</li>
+            <li>App deportiva para búsqueda de equipos de fútbol (HTML, Js y Css)</li>
+            <li>App para ver películas y series (Expo, API, Vite, Backend propio)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-    <footer>
-        <p>© 2025 - Portfolio de Jamie Alfredo Gutierrez Saravia</p>
-    </footer>
+    <section id="galeria">
+      <h2>Galería de Proyectos</h2>
+      <div class="carrusel">
+        <button onclick="cambiar(-1)">⟨</button>
+        <img id="carrusel" src="assets/img/foto_app_alfa_gym.jpeg">
+        <button onclick="cambiar(1)">⟩</button>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contacto">
+    <div class="contacto-footer">
+      <p>DNI: 94308941</p>
+      <p>Email: jamie.gutierrez.saravia@gmail.com</p>
+      <p>Teléfono: 1136996122</p>
+      <a href="https://github.com/jamieGutierrezSaravia" target="_blank">Mi perfil en GitHub</a>
+      <a href="https://www.linkedin.com/in/jamie-alfredo-gutierrez-saravia-b778471a1/" target="_blank">Mi perfil en LinkedIn</a>
+    </div>
+    <p>© 2025 - Portfolio de Jamie Alfredo Gutierrez Saravia</p>
+  </footer>
+
+  <button id="volver-arriba">⬆</button>
+  <script src="js/script.js"></script>
 </body>
 </html>
-
